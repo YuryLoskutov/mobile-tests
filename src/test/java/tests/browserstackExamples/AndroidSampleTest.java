@@ -20,8 +20,8 @@ public class AndroidSampleTest {
         DesiredCapabilities caps = new DesiredCapabilities();
 
         // Set your access credentials
-        caps.setCapability("browserstack.user", "autotestscloud_qAejV5");
-        caps.setCapability("browserstack.key", "DkvhzD6ZSLTsxYERedAR");
+        caps.setCapability("browserstack.user", "yuryloskutov_UXEbj4");
+        caps.setCapability("browserstack.key", "ubE8mo15cbM13oqAUCQm");
 
         // Set URL of the application under test
         caps.setCapability("app", "bs://c700ce60cf13ae8ed97705a55b8e022f13c5827c");
@@ -44,11 +44,11 @@ public class AndroidSampleTest {
 
         // Test case for the BrowserStack sample Android app.
         // If you have uploaded your app, update the test case here.
-        AndroidElement searchElement = (AndroidElement) new WebDriverWait(driver, Duration.ofSeconds(30)).until(
+        AndroidElement searchElement = (AndroidElement) new WebDriverWait(driver, 30).until(
                 ExpectedConditions.elementToBeClickable(
                         MobileBy.AccessibilityId("Search Wikipedia")));
         searchElement.click();
-        AndroidElement insertTextElement = (AndroidElement) new WebDriverWait(driver, Duration.ofSeconds(30)).until(
+        AndroidElement insertTextElement = (AndroidElement) new WebDriverWait(driver, 30).until(
                 ExpectedConditions.elementToBeClickable(
                         MobileBy.id("org.wikipedia.alpha:id/search_src_text")));
         insertTextElement.sendKeys("BrowserStack");
